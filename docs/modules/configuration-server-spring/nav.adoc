@@ -1,0 +1,2 @@
+.Config Server
+* xref:configuration-server-spring:index.adoc[Config Server Spring]
