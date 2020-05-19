@@ -1,0 +1,78 @@
+plugins {
+    id "java"
+    id "maven-publish"
+    id "org.springframework.boot" version "2.3.0.RELEASE"
+    id "io.spring.dependency-management" version "1.0.9.RELEASE"
+    id "com.diffplug.gradle.spotless" version "3.24.2"
+}
+
+group = PROJECT_GROUP
+version = PROJECT_VERSION
+description = PROJECT_DESCRIPTION
+
+compileJava {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+    options.encoding = "UTF-8"
+}
+
+compileTestJava {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+    options.encoding = "UTF-8"
+    options.compilerArgs += "-parameters"
+}
+
+ext {
+    dependenciesVersion = '0.0.1-SNAPSHOT'
+    googleJavaFormatVersion = '1.7'
+}
+
+repositories {
+    maven {
+        url REPOSITORY
+        credentials {
+            username = REPOSITORY_USERNAME
+            password = REPOSITORY_PASSWORD
+        }
+    }
+}
+
+dependencies {
+    implementation enforcedPlatform("org.cnb.nucleus:java-dependencies:${dependenciesVersion}")
+
+    implementation("org.cnb.nucleus:core")
+
+    implementation(
+            "org.springframework.cloud:spring-cloud-config-server",
+    )
+
+    implementation(
+            "org.springframework.boot:spring-boot-starter-actuator",
+            "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client",
+            "org.springframework.cloud:spring-cloud-starter-sleuth",
+            "org.springframework.cloud:spring-cloud-starter-zipkin",
+    )
+}
+
+spotless.java {
+    googleJavaFormat(googleJavaFormatVersion)
+}
+
+tasks.withType(JavaCompile).configureEach { javaCompile ->
+    dependsOn 'spotlessApply'
+}
+
+wrapper {
+    gradleVersion = GRADLE_VERSION
+}
+
+springBoot.buildInfo {
+    properties {
+        name = PROJECT_NAME
+    }
+}
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}

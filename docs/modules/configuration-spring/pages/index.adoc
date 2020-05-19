@@ -1,0 +1,45 @@
+= Config Server Spring
+
+:navtitle: Config Server Spring
+:reftext: Config Server Spring
+
+
+[abstract]
+Ant, Maven and Gradle are the most popular build tools in Java platform.
+Almost every java projects now-a-days built on either Maven nor Gradle.
+Although Ant solves different problems, serves different purpose, many projects still leverage the benefits of Ant.
+In this article Maven and Gradle's structure described side by side.
+Developer will find useful code snippets and resources for getting start.
+
+== Brief History
+
+First Demo
+
+
+== Additional Resources
+
+=== Watch
+
+* Pluralsight - https://app.pluralsight.com/library/courses/maven-fundamentals/[Maven Fundamentals, window="_blank"] by Bryan Hansen.
+** Duration *2h 24m*.
+** Released *28 Jun 2019*.
+* Pluralsight - https://app.pluralsight.com/library/courses/gradle-build-tool-fundamentals/[Gradle Build Tool Fundamentals, window="_blank"] by Kevin Jones.
+** Duration *2h 30m*.
+** Released *15 Apr 2020*.
+
+=== Read
+
+* https://docs.gradle.org/[Gradle Official User Manual, window="_blank"]
+* http://maven.apache.org/guides/index.html[Maven Official Documentation, window="_blank"]
+* https://www.jetbrains.com/help/idea/maven-support.html[Intellij IDEA - Maven, window="_blank"]
+* https://www.jetbrains.com/help/idea/gradle.html[Intellij IDEA - Gradle, window="_blank"]
+
+[bibliography]
+== References
+
+* [[[bb-ant,1]]] Apache Ant. https://en.wikipedia.org/wiki/Apache_Ant[Wikipedia]
+* [[[bb-maven,2]]] Apache Maven. https://en.wikipedia.org/wiki/Apache_Maven[Wikipedia]
+* [[[bb-gradle,3]]] Gradle. https://en.wikipedia.org/wiki/Gradle[Wikipedia]
+
+//http://openjdk.java.net/jeps/247
+

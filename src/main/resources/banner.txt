@@ -1,0 +1,10 @@
+${AnsiColor.BRIGHT_GREEN}        _  _  _           _           _        _  _  _  _
+${AnsiColor.BRIGHT_GREEN}     _ (_)(_)(_) _       (_) _       (_)      (_)(_)(_)(_) _
+${AnsiColor.BRIGHT_GREEN}    (_)         (_)      (_)(_)_     (_)       (_)        (_)
+${AnsiColor.BRIGHT_GREEN}    (_)                  (_)  (_)_   (_)       (_) _  _  _(_)
+${AnsiColor.BRIGHT_GREEN}    (_)                  (_)    (_)_ (_)       (_)(_)(_)(_)_
+${AnsiColor.BRIGHT_GREEN}    (_)          _       (_)      (_)(_)       (_)        (_)
+${AnsiColor.BRIGHT_GREEN}    (_) _  _  _ (_)      (_)         (_)       (_)_  _  _ (_)
+${AnsiColor.BRIGHT_GREEN}       (_)(_)(_)         (_)         (_)      (_)(_)(_)(_)
+
+${AnsiColor.RED} :: Spring Boot${spring-boot.formatted-version} :: ${Ansi.DEFAULT}

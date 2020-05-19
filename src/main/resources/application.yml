@@ -1,0 +1,23 @@
+server:
+  port: ${PORT:7085}
+spring:
+  application:
+    name: configuration-server
+  cloud:
+    config:
+      enabled: false
+      server:
+        health:
+          enabled: false
+        monitor:
+          github:
+            enabled: true
+        git:
+          uri: https://github.com/cloud-native-bangladesh/java-configuration-spring.git
+          force-pull: true
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7082/eureka/
