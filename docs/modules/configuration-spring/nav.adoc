@@ -1,2 +1,2 @@
+.Config Server Test
 * xref:configuration-spring:index.adoc[Config Server Spring]
-//include::configuration-spring:partial$nav/nav-nucleus.adoc[]
